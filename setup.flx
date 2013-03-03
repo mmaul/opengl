@@ -1,0 +1,18 @@
+include "PKGTOOL/pkgtool";
+BUILD_LIKE = Lib;
+open PkgTool;
+open Filename;
+
+instance PkgTool {
+
+  proc build () {
+    create_config("gl",list("GL/gl.h"),list("libGL"+#Config::config.EXT_SHLIB),
+      Empty[string]);
+    create_config("glu",list("GL/glu.h"),list("libGLU"+#Config::config.EXT_SHLIB),
+      list("gl"));
+    create_config("glext",list("GL/glext.h"),Empty[string],list("gl","glu"));
+    default_build();
+  }
+}
+
+SetupTool::run();
