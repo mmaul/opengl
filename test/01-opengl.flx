@@ -1,6 +1,6 @@
 include "PKGTOOL/pkgtool";
-include "OPENGL/glut";
+include "OPENGL/gl";
 open PkgTool;
-open GLUT;
+open GL;
 
-assert_true(GL_RED == GL_RED,"Test library accessability");
+assert_true(GL_TRUE == GL_TRUE,"Test library accessability");
