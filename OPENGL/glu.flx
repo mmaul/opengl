@@ -12,7 +12,7 @@ include "OPENGL/gl";
 
 class GLU
 {
-  requires package "glu";
+  requires package "opengl-glu";
   open C_hack;
   open GL;
 

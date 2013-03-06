@@ -13,7 +13,7 @@
 
 class GLEXT
 {
-  requires package "glext";
+  requires package "opengl-glext";
   header '#include "/usr/include/GL/glext.h"';
   open C_hack;
   const GL_GREMEDY_string_marker : int;

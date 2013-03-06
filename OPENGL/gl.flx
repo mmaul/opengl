@@ -12,7 +12,7 @@ include "OPENGL/glext";
 
 class GL
 {
-  requires package "gl";
+  requires package "opengl-gl";
   open C_hack;
   open GLEXT;
 
